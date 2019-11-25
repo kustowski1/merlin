@@ -137,8 +137,10 @@ tests: unit-tests cli-tests
 fix-style:
 	isort -rc $(MRLN)
 	isort -rc $(TEST)
+	isort *.py
 	black --target-version py36 $(MRLN)
 	black --target-version py36 $(TEST)
+	black --target-version py36 *.py
 
 
 # run code style checks

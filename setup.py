@@ -29,8 +29,9 @@
 ###############################################################################
 
 import os
-from setuptools import setup
-from setuptools import find_packages
+
+from setuptools import find_packages, setup
+
 
 version = __import__("merlin").VERSION
 
@@ -105,7 +106,7 @@ setup(
     entry_points={
         "console_scripts": [
             "merlin=merlin.main:main",
-            "merlin-templates=merlin.merlin_templates:main"
+            "merlin-templates=merlin.merlin_templates:main",
         ]
     },
     include_package_data=True,
